@@ -1,0 +1,221 @@
+$color1: #0e0e0e;
+$color2: rgb(45, 101, 82);
+$shadow:-10px -5px 50px 0 rgb(0 0 0 / 27%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: .32s;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; 
+}
+
+div.container{
+     display: none;
+}
+
+button, label{
+     cursor: pointer;
+}
+
+input[type="checkbox"]{
+     display: none;
+}
+
+header{
+     width: 100%;
+     height: 100%;
+     nav{
+          @extend header;
+          background-color: $color1;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-around;
+          gap: 20px;
+          padding: 1% 0%;
+     }
+
+     nav .logo{
+          min-width: 8%;
+          max-width: 9%;
+     }
+
+     nav .options{
+          min-width: 50%;
+          display: flex;
+          gap: 15px;
+          justify-content: flex-end;
+          position: relative;
+          
+          .btn-call-coll{
+               border: 1px solid aliceblue;
+               width: 100px;
+               height: 30px;
+               border-radius: 12px;
+               background-color: transparent;
+               color: aliceblue;     
+
+                    &:hover{
+                    border-color: transparent;
+                    background-color: $color2;
+                    
+               }
+          }
+
+          a{
+               color: aliceblue; 
+               width: 100px;
+               height: 30px;
+               border: 0;
+               display: flex;
+               align-items: center;
+               text-decoration: none;
+
+               &:hover{
+                    color: $color2;
+               }
+          }
+
+          a[href="#"]{
+               cursor: initial;
+               color: $color2;
+          }
+
+          .collapse-md{
+               position: absolute;
+               top: 40px;
+               width: 150px;
+               height: 75px;
+               background-color: aliceblue;
+               box-shadow: $shadow;
+               display: none;
+               flex-wrap: wrap;
+               border-radius: 12px;
+               overflow: hidden;
+          
+               *{
+                    width: 100%;
+                    padding: 6% 8%;
+
+                    &:hover{
+                         background-color: $color2;
+                         color: aliceblue;
+                    }
+               }
+               
+          }
+     }
+}
+
+
+.preload{
+    z-index: 12;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $color1;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 38px;
+    
+
+    .img-preload{
+        width: 20%;    
+        animation: zoom-outoff;
+        animation-duration: 5s;
+    }
+
+    h1{
+        font-size: 3.4em;
+        color: aliceblue;
+        text-align: center;
+    }
+}
+
+
+main .content{
+     width: 60%;
+     margin: 4% auto;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 35px;
+     justify-content: center;
+     text-align: center;
+
+     form, h2{
+          width: 100%;
+     }
+
+     h2{
+          font-size: 4.5ch;
+     }
+
+     form{
+          display: grid; 
+          gap: 10%;
+          *{
+               margin: 0 auto;
+               width: 60%;
+               height: 40px;
+               padding: 1% 3%;
+               border: 1px solid rgba(57, 57, 57, 0.577);
+               border-radius: 6px;
+
+               @media (max-width: 700px) {
+                    width: 100%;
+               }
+          }
+
+          button{
+               background-color: $color2;
+               font-size: large;
+               color: aliceblue;
+
+               &:hover{
+                    background-color: $color1;
+                    color: aliceblue;
+               }
+          }
+
+     }
+}
+
+//special Effects/queries and others
+
+@keyframes zoom-outoff{
+   0%{
+        transform: rotate(0);
+   }
+   30%{
+        transform: rotate(50deg);
+   }
+   60%{
+        transform: scale(1.4);
+   }
+   100%{
+        transform: rotate(1);
+        transform: scale(1.0);
+   }
+}
+
+.darkmode{
+     background-color: $color1;
+     nav{
+          background-color: $color2;
+     }
+     h2{
+          color: aliceblue;
+     }
+
+     .options a[href="#"]{
+          color: #0e0e0e;
+     }
+}

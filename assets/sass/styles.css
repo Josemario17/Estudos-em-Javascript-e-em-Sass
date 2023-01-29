@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: 0.32s;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+div.container {
+  display: none;
+}
+
+button, label {
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+header, header nav {
+  width: 100%;
+  height: 100%;
+}
+header nav {
+  background-color: #0e0e0e;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 1% 0%;
+}
+header nav .logo {
+  min-width: 8%;
+  max-width: 9%;
+}
+header nav .options {
+  min-width: 50%;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  position: relative;
+}
+header nav .options .btn-call-coll {
+  border: 1px solid aliceblue;
+  width: 100px;
+  height: 30px;
+  border-radius: 12px;
+  background-color: transparent;
+  color: aliceblue;
+}
+header nav .options .btn-call-coll:hover {
+  border-color: transparent;
+  background-color: rgb(45, 101, 82);
+}
+header nav .options a {
+  color: aliceblue;
+  width: 100px;
+  height: 30px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+header nav .options a:hover {
+  color: rgb(45, 101, 82);
+}
+header nav .options a[href="#"] {
+  cursor: initial;
+  color: rgb(45, 101, 82);
+}
+header nav .options .collapse-md {
+  position: absolute;
+  top: 40px;
+  width: 150px;
+  height: 75px;
+  background-color: aliceblue;
+  box-shadow: -10px -5px 50px 0 rgba(0, 0, 0, 0.27);
+  display: none;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  overflow: hidden;
+}
+header nav .options .collapse-md * {
+  width: 100%;
+  padding: 6% 8%;
+}
+header nav .options .collapse-md *:hover {
+  background-color: rgb(45, 101, 82);
+  color: aliceblue;
+}
+
+.preload {
+  z-index: 12;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0e0e0e;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 38px;
+}
+.preload .img-preload {
+  width: 20%;
+  -webkit-animation: zoom-outoff;
+          animation: zoom-outoff;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+.preload h1 {
+  font-size: 3.4em;
+  color: aliceblue;
+  text-align: center;
+}
+
+main .content {
+  width: 60%;
+  margin: 4% auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  text-align: center;
+}
+main .content form, main .content h2 {
+  width: 100%;
+}
+main .content h2 {
+  font-size: 4.5ch;
+}
+main .content form {
+  display: grid;
+  gap: 10%;
+}
+main .content form * {
+  margin: 0 auto;
+  width: 60%;
+  height: 40px;
+  padding: 1% 3%;
+  border: 1px solid rgba(57, 57, 57, 0.577);
+  border-radius: 6px;
+}
+@media (max-width: 700px) {
+  main .content form * {
+    width: 100%;
+  }
+}
+main .content form button {
+  background-color: rgb(45, 101, 82);
+  font-size: large;
+  color: aliceblue;
+}
+main .content form button:hover {
+  background-color: #0e0e0e;
+  color: aliceblue;
+}
+
+@-webkit-keyframes zoom-outoff {
+  0% {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(50deg);
+  }
+  60% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: rotate(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-outoff {
+  0% {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(50deg);
+  }
+  60% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: rotate(1);
+    transform: scale(1);
+  }
+}
+.darkmode {
+  background-color: #0e0e0e;
+}
+.darkmode nav {
+  background-color: rgb(45, 101, 82);
+}
+.darkmode h2 {
+  color: aliceblue;
+}
+.darkmode .options a[href="#"] {
+  color: #0e0e0e;
+}/*# sourceMappingURL=styles.css.map */

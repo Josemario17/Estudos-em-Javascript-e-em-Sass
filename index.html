@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Fundos</title>
+    <link rel="stylesheet" href="assets/sass/styles.css">
+</head>
+<body id="root" class="default">
+    <div class="preload">
+        <img src="assets/img/private-image.png" alt="" class="img-preload">
+        <h1>Gestor de Fundos e Despesas</h1>
+    </div>
+
+    <div class="container">
+        <header>
+            <nav>
+                <img src="assets/img/private-image.png" alt="" class="logo">
+                <div class="options">
+                    <a href="#">Cadastrar</a>
+                    <a href="">Consulta</a>
+                    <button class="btn-call-coll">Tema</button>
+                    <div class="collapse-md">
+                        <label for="default">Default</label>
+                        <input type="checkbox" name="t-check" id="default">
+                        <label for="Darkmode">Darkmode</label>
+                        <input type="checkbox" name="t-check" id="Darkmode">
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content">
+              
+                <h2>Gestor de Fundos e Despesas</h2>
+                <form class="group-content">
+                    <input type="date" name="t-date" id="dateV" required>
+                    <select name="" id="typeSelect">
+                        <option value="0">Tipo da Despesa</option>
+                        <option value="1">Educação</option>
+                        <option value="2">Lazer</option>
+                        <option value="3">Saúde</option>
+                        <option value="4">Transporte</option>
+                    </select>
+                    <input type="text" name="t-text" id="textDescribe" placeholder="Descrição..." minlength="3" maxlength="450">
+                    <input type="number" name="t-number" id="valueThis" required>
+                    <button type="submit" id="btnCompleteAct">(icon Plus)</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+</body>
+<script src="assets/js/basics.js"></script>
+</html>
