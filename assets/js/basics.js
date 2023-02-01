@@ -1,11 +1,20 @@
 
 
 document.getElementById("root").onload = function(){
+    if(document.querySelectorAll(".preload").length > 0)
+    {
     setTimeout(Step2, 6500)
-    function Step2(){
-        document.querySelectorAll(".preload")[0].style.display = "none"
+       
+    }
+
+    else{
         document.querySelectorAll(".container")[0].style.display = "block"
     }
+    function Step2(){
+        
+            document.querySelectorAll(".preload")[0].style.display = "none"
+            document.querySelectorAll(".container")[0].style.display = "block"
+        } 
  }
 
  document.querySelector(".btn-call-coll").onclick = function(){
