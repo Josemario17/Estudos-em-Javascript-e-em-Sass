@@ -7,7 +7,7 @@
     <title>Consulta</title>
     <link rel="stylesheet" href="assets/sass/styles.css">
 </head>
-<body id="root" class="default">
+<body id="root1" class="default">
     <div class="container">
         <header>
             <nav>
@@ -28,42 +28,32 @@
 
         <main>
             <section class="content">
-                <h2>Consultar Despesas</h2>
-                <form class="group-content search">
-                    <input type="date" name="t-date" id="dateV" required>
-                    <select name="" id="typeSelect">
-                        <option value="0">Tipo da Despesa</option>
-                        <option value="1">Educação</option>
-                        <option value="2">Lazer</option>
-                        <option value="3">Saúde</option>
-                        <option value="4">Transporte</option>
-                    </select>
-                    <input type="number" name="t-number" id="valueThis" required>
-                    <button type="submit" id="btnCompleteAct">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                      </svg>
-                      </button>
-                </form>
-
-                <table class="s-result">
+                <h2>Todas as Despesas</h2>
+               <table class="s-result">
                     <tr class="descritions">
                         <td>Data</td>
                         <td>Tipo</td>
                         <td>Descrição</td>
                         <td>Valor</td>
                     </tr>
+                    <tbody class="find">
 
-                    <tr id="find">
-                        <td>aa</td>
-                        <td>aa</td>
-                        <td>aa</td>
-                        <td>aa</td>
-                    </tr>
+                    </tbody>
                 </table>
             </section>
         </main>
     </div>
+    
 
+    <footer>
+        <div>
+            <h2>Gestor de Despesas</h2>
+        </div>
+
+        <div>
+            <p>Made by. José Alfredo Mário Dos Santos</p>
+        </div>
+    </footer>
 </body>
 <script src="assets/js/basics.js"></script></html>
+<script src="assets/js/search.js"></script>

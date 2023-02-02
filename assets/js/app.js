@@ -66,7 +66,7 @@ function createDisp()
             gravar(d){
                 let id = this.getproximoID()
                 localStorage.setItem("ID", id)
-                localStorage.setItem("DESPESA  - " + id, JSON.stringify(d))
+                localStorage.setItem("" + id, JSON.stringify(d))
             }
         }
         let bds = new bd()
