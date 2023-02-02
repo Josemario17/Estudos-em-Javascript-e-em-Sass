@@ -10,40 +10,6 @@ let listaDespesas = new Array()
 class consulta{
 
 
-    validandocampos(){
-        let names = ["", "Educação", "Lazer", "Saúde", "Transporte"]
-        for(let i = 0; i<names.length; i++)
-        {
-            if(typeSelectC.value = i)
-            {
-                typeSelectC = names[i]
-                i = names.length
-            }
-        }
-        
-        if(dateC.value == "" || ((typeSelectC == 0) || typeSelectC.value == 0) || valueThisC.value == ""){
-            return false    
-        }
-
-        else{
-            this.limparDados()
-            return true
-        }
-
-    }
-
-    limparDados(){
-        let list = document.querySelectorAll("input")
-        for(let i=0; i<list.length; i++)
-        {
-            list[i].value = ""
-        }
-    }
-
-    lsitarDespesas(){
-       
-    }
-
     recuperarLista(){
 
 		let id = localStorage.getItem("ID")
